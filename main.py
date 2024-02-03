@@ -8,9 +8,9 @@ y_train = nnt.Tensor(nnt.dot(X_train, nnt.Tensor([1, -2, 1]).T))
 
 # build model using Sequential: 
 model = nn.Sequential(
-    nn.Linear(3, 3),
+    nn.Linear(3, 4),
     nn.ReLU(),
-    nn.Linear(3, 1)
+    nn.Linear(4, 1)
 )
 
 # define the loss function: 
