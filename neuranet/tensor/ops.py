@@ -4,7 +4,7 @@ import numpy as np
 
 
 __all__ = ["dot", "rand", "zeros", "multiply" ,"tensor2strings", "sum"
-           , "where", "norm"]
+           , "where", "norm", "exp"]
 
 
 def dot(tensor1: Tensor, tensor2: Tensor) -> Tensor:
@@ -70,6 +70,9 @@ def norm(input: Tensor) -> Tensor:
 
 def where(tensor: Tensor[bool], val1: Any, val2: Any):
     return Tensor(np.where(tensor, val1, val2))
+
+def exp(tensor: Tensor) -> Tensor:
+    return Tensor(np.exp(tensor))
 
 
 def tensor2strings(tensor: Tensor) -> str:
